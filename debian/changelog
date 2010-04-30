@@ -1,5 +1,5 @@
 mochiweb (20100429-1) unstable; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release.
 
- -- David N. Welton <davidw@unknown>  Fri, 30 Apr 2010 16:01:37 +0200
+ -- David N. Welton <davidw@dedasys.com>  Fri, 30 Apr 2010 16:01:37 +0200
