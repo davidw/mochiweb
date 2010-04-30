@@ -10,7 +10,7 @@
 #export DH_VERBOSE=1
 
 
-
+MOCHIVERSION=20100429
 
 
 configure: configure-stamp
@@ -49,8 +49,11 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/mochiweb.
-	$(MAKE) DESTDIR=$(CURDIR)/debian/mochiweb install
-
+	#	$(MAKE) DESTDIR=$(CURDIR)/debian/mochiweb install
+	mkdir -p $(CURDIR)/debian/mochiweb/usr/lib/erlang/lib/mochiweb-$(MOCHIVERSION)/
+	cp -r ebin/ -t $(CURDIR)/debian/mochiweb/usr/lib/erlang/lib/mochiweb-$(MOCHIVERSION)/
+	cp -r priv/ $(CURDIR)/debian/mochiweb/usr/lib/erlang/lib/mochiweb-$(MOCHIVERSION)/
+	cp -r include/ $(CURDIR)/debian/mochiweb/usr/lib/erlang/lib/mochiweb-$(MOCHIVERSION)/
 
 # Build architecture-independent files here.
 binary-indep: install
