@@ -54,6 +54,7 @@ install: build
 	cp -r ebin/ -t $(CURDIR)/debian/mochiweb/usr/lib/erlang/lib/mochiweb-$(MOCHIVERSION)/
 	cp -r priv/ $(CURDIR)/debian/mochiweb/usr/lib/erlang/lib/mochiweb-$(MOCHIVERSION)/
 	cp -r include/ $(CURDIR)/debian/mochiweb/usr/lib/erlang/lib/mochiweb-$(MOCHIVERSION)/
+	install scripts/new_mochiweb.erl $(CURDIR)/debian/mochiweb/usr/bin/new_mochiweb
 
 # Build architecture-independent files here.
 binary-indep: install
