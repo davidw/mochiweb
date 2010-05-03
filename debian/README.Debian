@@ -1,6 +1,20 @@
 mochiweb for Debian
 -------------------
 
-To have your mochiweb projects automatically launched by the init.d script, place FIXME.
+To have your mochiweb projects automatically launched by the init.d
+script, you create files in /etc/mochiweb/apps, each of which contains
+one line, the directory of its application.
+
+For instance:
+
+    /etc/mochiweb/apps/foobar
+
+Which contains
+
+    /var/www/foobar/
+
+Which was created with the 'new_mochiweb' script:
+
+    new_mochiweb foobar /var/www
 
  -- David N. Welton <davidw@dedasys.com>  Fri, 30 Apr 2010 16:01:37 +0200
